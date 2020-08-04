@@ -1,0 +1,180 @@
+body{
+	font-family: 'Poppins', sans-serif;
+	background: #fafafa;
+}
+p{
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	line-height: 1.7em;
+	color: #999;
+}
+a,
+a:hover,
+a:focus{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+/* Side Bar*/
+
+#sidebar.active {
+    margin-left: -250px;
+}
+.wrapper{
+	display: flex;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+#sidebar{
+	min-width: 250px;
+	max-width: 250px;
+	background: #7386D5;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+#sidebar li a:active{color:white;}
+
+
+#sidebar .sidebar-header{
+	padding: 8px;
+	padding-top: 16px;
+	background: #010B41;
+	width: 100% !important;
+}
+#sidebar ul.components{
+	padding: 20px 0;
+	border-bottom: 1px solid #4E6BFF;
+}
+
+#sidebar ul p{
+	color: #fff;
+	padding: 10px;
+}
+
+#sidebar ul li a{
+	padding: 10px;
+	font-size: 20px, important!;
+	display: block;
+}
+
+#sidebar li active{
+	background: white !important;
+}
+
+#sidebar ul li a:hover{
+	color: #7386D5;
+	background: #fff;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+	color: #fff;
+	background: #6d7fcc;
+}
+
+a[data-toggle="collapse"]{
+	position: relative;
+}
+
+.dropdown-toggle::after{
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	transform: translateY(-50%);
+}
+ul ul a{
+	font-size: 0.9em !important;
+	padding-left: 30px !important;
+	background: #6d7fcc;
+}
+
+#content{
+	width: 100%;
+	padding: 20px;
+	min-height: 100vh;
+	transition: all 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* Form */
+.contact-form {
+	display: flex;
+	transform: translate(60%, 0);
+	flex-direction: column;
+	position: absolute;		
+}
+
+.input-fields,
+.msg{
+  width: 25%;
+}
+
+.input-fields .input{
+  margin: 2px 0;
+  background: transparent;
+  border: 0px;
+  opacity: 0.4;
+  border-bottom: 2px solid #000000;
+  padding: 10px;
+  color: #141718;
+  width: 100%;
+  font-size: 14px !important;
+  
+}
+
+.button {
+    background: #39b7dd;
+    padding: 15px;
+    border-radius: 33px;
+    color: #fff;
+	text-transform: uppercase;
+	width: 12%;
+	text-align: center;
+	font-size: 15px;
+	background-image: linear-gradient(to right,#00FF55, #41F97F);
+	margin-top: 15px;
+	border: 0;
+	height: 5%;
+}
+
+.msg textarea{
+	transform: translate(80%, 130%);
+}
+
+textarea {
+	background: white;
+	border: none;
+	
+}
+
+@media screen and (max-width: 600px){
+	.contact-form{
+	  flex-direction: column;
+	}
+	.msg textarea{
+	  height: 80px;
+	}
+	.input-fields{
+	  width: 100%;
+	}
+	textarea{
+		width: 350px !important;
+		height: 100px !important;
+	}
+  }

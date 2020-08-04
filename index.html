@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collapse sidebar in Bootstrap 4</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+	
+ <nav id="sidebar">
+ 	
+ 	 <div class="sidebar-header">
+ 	 	<h5>BilQis_Shop</h5>
+ 	 </div>
+ 	 <ul class="lisst-unstyled components">
+ 	 	<li class="mb-2">
+ 	 		<a href="tentang.html"><i class="fas fa-info-circle mr-3"></i>Tentang</a>
+ 	 	</li>
+ 	 	<li class="mb-2 active">
+ 	 		<a href="index.html"><i class="fas fa-box mr-3 active"></i>Produk</a>
+ 	 	</li>
+		  <li class="mb-2">
+			<a href="transaksi.html"><i class="fas fa-box-open mr-3"></i>Transaksi</a>
+		</li>
+		<li class="mb-2">
+			<a href="stock.html"><i class="fas fa-warehouse mr-3"></i>Stock</a>
+		</li>
+		<li class="mb-2">
+			<a href="customer.html"><i class="fas fa-users mr-3"></i>Customer</a>
+		</li>
+		<li class="mb-2">
+			<a href="supplier.html"><i class="fas fa-user-tag mr-3"></i>Supplier</a>
+		</li>
+		<li class="mb-2">
+			<a href="riwayat.html"><i class="fas fa-history mr-3"></i>Riwayat</a>
+		</li>
+		<li class="mb-2">
+			<a href="#"><i class="fas fa-power-off mr-3"></i>Keluar</a>
+		</li>
+ 	 </ul>
+ </nav>
+
+
+<div id="content">
+	
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<div class="container-fluid">
+  		<button type="button" id="sidebarCollapse" class="btn  btn-info">
+  			<i class="fas fa-align-left"></i>
+  			<span> Bar Doddle</span>
+  		</button>
+  	</div>
+	  </nav>
+	 
+
+<!-- Form -->
+
+	  <div class="contact-form">
+		<div class="input-fields">
+		  <input type="text" class="input" placeholder="Nama Produk">
+		  <input type="text" class="input" placeholder="Merk">
+		  <input type="text" class="input" placeholder="Phone">
+		  <input type="text" class="input" placeholder="Kategori">
+		  <input type="text" class="input" placeholder="Harga">
+		  <input type="text" class="input" placeholder="Kode">
+		  <input type="text" class="input" placeholder="Stock">
+		  <input type="text" class="input" placeholder="Satuan">
+		  <input type="text" class="input" placeholder="Minimum Stock">
+		  <input type="text" class="input" placeholder="Berat">
+		</div>
+			<button class="button" type="button">simpan</button>
+		</div>
+		<div class="msg">
+			<textarea name="" id="" cols="20" rows="8"></textarea>
+		</div>
+	  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+
+$(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Postman -->
