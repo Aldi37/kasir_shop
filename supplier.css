@@ -34,6 +34,7 @@ a:focus{
 	background: #4E6BFF;
 	color: #fff;
 	transition: all 0.3s;
+	height: 45em;
 }
 
 #sidebar li a:active{color:white;}
@@ -98,25 +99,6 @@ ul li a{
 	transition: all 0.3s;
 }
 
-.list-style{
-	list-style: none;
-}
- .icon1{
-	 margin-left: 140px;
- }
-
- .icon2{
-	 margin-left: 150px;
- }
-#toggle2{
-	display: none;
-}
-
-#toggle4{
-	display: none;
-}
-
-
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
@@ -130,7 +112,6 @@ ul li a{
 }
 
 /* Form */
-
 .contact-form {
 	display: flex;
 	transform: translate(5%, 0);
@@ -198,28 +179,33 @@ ul li a{
 	}
   }
 
+.list-style{
+list-style: none;
+}
+ .icon1{
+	 margin-left: 140px;
+ }
+
+ .icon2{
+	 margin-left: 150px;
+ }
+#toggle2{
+	display: none;
+}
+
+#toggle4{
+	display: none;
+}
+
+
 /* form */
-.img-control {
+
+.from-inline{
+	transform: translate(0, -80%) !important;
+}
+
+.form-control {
 	position: relative;
-	border-radius: 500px;
-	width: fit-content;
-	height: fit-content;
-	transform: translate(80%, 40%);
-}
-
-.form-group{
-	
-	width: 24em !important;
-	height: 25em !important;
-}
-
-.form-control{
-	height: 10em !important;
-	transform: translate(20%, 80%);
-}
-
-.form-control:focus{
-	box-shadow: none;
 }
 
 .button1 {
@@ -240,12 +226,3 @@ ul li a{
 	border: none;
 	transform: translate(-10%, 0);
 }
-
-@media screen and (max-width: 600px){
-	.contact-form{
-	  flex-direction: column;
-	}
-	.input-fields{
-	  width: 100%;
-	}
-  }

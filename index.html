@@ -22,14 +22,22 @@
  	 		<a href="tentang.html"><i class="fas fa-info-circle mr-3"></i>Tentang</a>
  	 	</li>
  	 	<li class="mb-2 active">
- 	 		<a href="index.html"><i class="fas fa-box mr-3 active"></i>Produk</a>
+ 	 		<a href="index.html"><i class="fas fa-box mr-3 active"></i>Tambah Produk</a>
  	 	</li>
 		  <li class="mb-2">
 			<a href="transaksi.html"><i class="fas fa-box-open mr-3"></i>Transaksi</a>
 		</li>
 		<li class="mb-2">
-			<a href="stock.html"><i class="fas fa-warehouse mr-3"></i>Stock</a>
+			<a type="button" id="toggle3"><i class="fas fa-warehouse mr-3"></i>Stock<i class="fas fa-caret-down icon2"></i></a>
 		</li>
+			<ul id="toggle4" class="list-style">
+				<li class="mb-2">
+					<a href="tambah.html"><i class="fas fa-cart-plus mr-2"></i>Tambah Stock</a>
+				</li>
+				<li class="mb-2">
+					<a href="stock.html"><i class="fas fa-warehouse mr-3"></i>Gudang</a>
+				</li>
+			</ul>
 		<li class="mb-2">
 			<a href="customer.html"><i class="fas fa-users mr-3"></i>Customer</a>
 		</li>
@@ -37,8 +45,16 @@
 			<a href="supplier.html"><i class="fas fa-user-tag mr-3"></i>Supplier</a>
 		</li>
 		<li class="mb-2">
-			<a href="riwayat.html"><i class="fas fa-history mr-3"></i>Riwayat</a>
+			<a type="button" id="toggle1"><i class="fas fa-history mr-3"></i>Riwayat<i class="fas fa-caret-down icon1"></i></a>
 		</li>
+			<ul id="toggle2" class="list-style">
+				<li class="mb-2">
+					<a href="riwayatpengeluaran.html"><i class="fas fa-hand-holding-usd mr-2"></i>Pengeluaran</a>
+				</li>
+				<li class="mb-2">
+					<a href="riwayat.html"><i class="fas fa-dollar-sign mr-3"></i>Pemasukan</a>
+				</li>
+			</ul>
 		<li class="mb-2">
 			<a href="#"><i class="fas fa-power-off mr-3"></i>Keluar</a>
 		</li>
@@ -46,39 +62,45 @@
  </nav>
 
 
-<div id="content">
-	
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  	<div class="container-fluid">
-  		<button type="button" id="sidebarCollapse" class="btn  btn-info">
-  			<i class="fas fa-align-left"></i>
-  			<span> Bar Doddle</span>
-  		</button>
-  	</div>
-	  </nav>
+	<div id="content">
+		
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<button type="button" id="sidebarCollapse" class="btn  btn-info">
+				<i class="fas fa-align-left"></i>
+				<span> Full Screen </span>
+			</button>
+		</div>
+	</nav>
 	 
 
 <!-- Form -->
+	<div class="row">
+		<div class="col-md-6">
+			<img src="food.png" alt="" class="img-control">
+			<div class="form-group">
+				<textarea class="form-control" rows="4" cols="4"></textarea>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="contact-form">
+				<div class="input-fields">
+					<input type="text" class="input" placeholder="Nama">
+					<input type="text" class="input" placeholder="Merk">
+					<input type="text" class="input" placeholder="Stock">
+					<input type="text" class="input" placeholder="Ketegori">
+					<input type="text" class="input" placeholder="Stock Minimum">
+					<input type="text" class="input" placeholder="Tanggal">
+					<input type="text" class="input" placeholder="Kode">
+					<input type="text" class="input" placeholder="Harga Beli">
+					<input type="text" class="input" placeholder="Harga Jual">
+					<input type="text" class="input" placeholder="Harga Discount">
+					<button class="button" type="button">simpan</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	  <div class="contact-form">
-		<div class="input-fields">
-		  <input type="text" class="input" placeholder="Nama Produk">
-		  <input type="text" class="input" placeholder="Merk">
-		  <input type="text" class="input" placeholder="Phone">
-		  <input type="text" class="input" placeholder="Kategori">
-		  <input type="text" class="input" placeholder="Harga">
-		  <input type="text" class="input" placeholder="Kode">
-		  <input type="text" class="input" placeholder="Stock">
-		  <input type="text" class="input" placeholder="Satuan">
-		  <input type="text" class="input" placeholder="Minimum Stock">
-		  <input type="text" class="input" placeholder="Berat">
-		</div>
-			<button class="button" type="button">simpan</button>
-		</div>
-		<div class="msg">
-			<textarea name="" id="" cols="20" rows="8"></textarea>
-		</div>
-	  </div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -92,6 +114,20 @@ $(document).ready(function () {
                 $('#sidebar').toggleClass('active');
             });
         });
+
+$(document).ready(function (){
+	$(' #toggle1').on('click', function() {
+		$('#toggle2').toggle('active');
+	});
+
+})
+
+$(document).ready(function (){
+	$(' #toggle3').on('click', function() {
+		$('#toggle4').toggle('active');
+	});
+
+})
 
 </script>
 

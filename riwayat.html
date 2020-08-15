@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collapse sidebar in Bootstrap 4</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<link rel="stylesheet" href="riwayat.css">
+</head>
+<body>
+
+
+    <div class="wrapper">
+	
+        <nav id="sidebar">
+            
+             <div class="sidebar-header">
+                 <h5>BilQis_Shop</h5>
+             </div>
+             <ul class="lisst-unstyled components">
+                 <li class="mb-2">
+                     <a href="tentang.html"><i class="fas fa-info-circle mr-3"></i>Tentang</a>
+                 </li>
+                 <li class="mb-2 ">
+                     <a href="index.html"><i class="fas fa-box mr-3 active"></i>Tambah Produk</a>
+                 </li>
+                 <li class="mb-2">
+                   <a href="transaksi.html"><i class="fas fa-box-open mr-3"></i>Transaksi</a>
+               </li>
+               <li class="mb-2">
+                   <a type="button" id="toggle3"><i class="fas fa-warehouse mr-3"></i>Stock<i class="fas fa-caret-down icon2"></i></a>
+               </li>
+                   <ul id="toggle4" class="list-style">
+                       <li class="mb-2">
+                           <a href="tambah.html"><i class="fas fa-cart-plus mr-2"></i>Tambah Stock</a>
+                       </li>
+                       <li class="mb-2">
+                           <a href="stock.html"><i class="fas fa-warehouse mr-3"></i>Gudang</a>
+                       </li>
+                   </ul>
+               <li class="mb-2">
+                   <a href="customer.html"><i class="fas fa-users mr-3"></i>Customer</a>
+               </li>
+               <li class="mb-2">
+                   <a href="supplier.html"><i class="fas fa-user-tag mr-3"></i>Supplier</a>
+               </li>
+               <li class="mb-2">
+                   <a type="button" id="toggle1"><i class="fas fa-history mr-3"></i>Riwayat<i class="fas fa-caret-down icon1"></i></a>
+               </li>
+                   <ul id="toggle2" class="list-style">
+                       <li class="mb-2">
+                           <a href="riwayatpengeluaran.html"><i class="fas fa-hand-holding-usd mr-2"></i>Pengeluaran</a>
+                       </li>
+                       <li class="mb-2 active">
+                           <a href="riwayat.html"><i class="fas fa-dollar-sign mr-3"></i>Pemasukan</a>
+                       </li>
+                   </ul>
+               <li class="mb-2">
+                   <a href="#"><i class="fas fa-power-off mr-3"></i>Keluar</a>
+               </li>
+             </ul>
+        </nav>
+       
+       
+           <div id="content">
+               
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="container-fluid">
+                   <button type="button" id="sidebarCollapse" class="btn  btn-info">
+                       <i class="fas fa-align-left"></i>
+                       <span> Full Screen </span>
+                   </button>
+               </div>
+           </nav>
+            
+       
+  <!-- Search -->
+        
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="button1 btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="button2 btn btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-filter"></i></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" id="">Nama</a>
+                  <a class="dropdown-item" href="#" id="">Merk</a>
+                  <a class="dropdown-item" href="#" id="">Berat</a>
+                  <a class="dropdown-item" href="#" id="">Kategori</a>
+                  <a class="dropdown-item" href="#" id="">Tanggal</a>
+                  <a class="dropdown-item" href="#" id="">Kode</a>
+                  <a class="dropdown-item" href="#" id="">No Transaksi</a>
+                  <a class="dropdown-item" href="#" id="">Jumlah Terbeli</a>
+                  <a class="dropdown-item" href="#" id="">Harga Jual Termurah</a>
+                  <a class="dropdown-item" href="#" id="">Harga Jual Termahal</a>
+                </div>
+              </div>
+            </div>
+          <div class="form-group">
+              <select class="form-control">
+                  <option> Download </option>
+              </select>
+          </div>
+        </form>
+  
+  <!-- table -->
+  
+      <table class="table">
+          <thead class="thead-dark">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">No</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Merk</th>
+              <th scope="col">Jumlah Terbeli</th>
+              <th scope="col">Cancel</th>
+              <th scope="col">Kategori</th>
+              <th scope="col">Stock Minimun</th>
+              <th scope="col">Tanggal</th>
+              <th scope="col">Kode</th>
+              <th scope="col">No Transaksi</th>
+              <th scope="col">Harga Beli</th>
+              <th scope="col">Harga Jual</th>
+              <th scope="col">Pendapatan Bersih</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><button type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></th>
+              <td>1</td>
+              <td>Makanan Kucing</td>
+              <td>Whiskas</td>
+              <td>50</td>
+              <td><a href="">Cancel</td>
+              <td>Makanan</td>
+              <td>50</td>
+              <td>Senin, 28 Oktober 2020</td>
+              <td>03#</td>
+              <td>177013</td>
+              <td>Rp. 25,000</td>
+              <td>Rp. 30,000</td>
+              <td>Rp. 5,000</td>
+            </tr>
+            <tr>
+              <th scope="row"><button type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></th>
+              <td>1</td>
+              <td>Makanan Kucing</td>
+              <td>Whiskas</td>
+              <td>350</td>
+              <td><a href="">Cancel</td>
+              <td>Makanan</td>
+              <td>50</td>
+              <td>Senin, 28 Oktober 2020</td>
+              <td>03#</td>
+              <td>177013</td>
+              <td>Rp. 25,000</td>
+              <td>Rp. 30,000</td>
+              <td>Rp. 5,000</td>
+        </tr>
+          </tbody>
+      </table>
+
+	  
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+
+$(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        $(document).ready(function (){
+    $(' #toggle1').on('click', function() {
+        $('#toggle2').toggle('active');
+});
+
+})
+
+$(document).ready(function (){
+	$(' #toggle3').on('click', function() {
+		$('#toggle4').toggle('active');
+	});
+
+})
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Postman -->

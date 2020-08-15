@@ -98,6 +98,17 @@ ul li a{
 	transition: all 0.3s;
 }
 
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
 .list-style{
 	list-style: none;
 }
@@ -117,112 +128,16 @@ ul li a{
 }
 
 
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-
-/* Form */
-
-.contact-form {
-	display: flex;
-	transform: translate(5%, 0);
-	flex-direction: column;
-	position: absolute;		
-	font-size: 12px !important;
-}
-
-.contact-form .input:focus {
-	outline: 0 !important;
-}
-
-
-.input-fields{
-  width: 90%;
-  outline: 0 !important;
-  padding: 24px;
-}
-
-.input-fields .input{
-  margin: 2px 0;
-  background: transparent;
-  border: 0px;
-  opacity: 0.4;
-  border-bottom: 2px solid #000000;
-  padding: 10px;
-  color: #141718;
-  width: 100%;
-  font-size: 14px !important;
-  padding: 16px;
-}
-
-.button {
-    background: #39b7dd;
-    padding: 8px;
-    border-radius: 33px;
-    color: #fff;
-	text-transform: uppercase;
-	width: 12%;
-	text-align: center;
-	font-size: 15px;
-	background-image: linear-gradient(to right,#00FF55, #41F97F);
-	margin-top: 15px;
-	border: 0;
-	height: 2% !important;
-	font-weight: 3px;
-	position: relative;
-	width: 30%;
-}
-
-.button:focus{
-	outline: 0 !important;
-}
-
-
-@media screen and (max-width: 600px){
-	.contact-form{
-	  flex-direction: column;
-	}
-	.msg textarea{
-	  height: 80px;
-	}
-	.input-fields{
-	  width: 100%;
-	}
-  }
-
 /* form */
-.img-control {
-	position: relative;
-	border-radius: 500px;
-	width: fit-content;
-	height: fit-content;
-	transform: translate(80%, 40%);
-}
 
-.form-group{
-	
-	width: 24em !important;
-	height: 25em !important;
-}
-
-.form-control{
-	height: 10em !important;
-	transform: translate(20%, 80%);
-}
-
-.form-control:focus{
-	box-shadow: none;
+.form-control {
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .button1 {
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
 	border: none;
 	transform: translate(-123%, 0);
 }
@@ -241,11 +156,3 @@ ul li a{
 	transform: translate(-10%, 0);
 }
 
-@media screen and (max-width: 600px){
-	.contact-form{
-	  flex-direction: column;
-	}
-	.input-fields{
-	  width: 100%;
-	}
-  }
